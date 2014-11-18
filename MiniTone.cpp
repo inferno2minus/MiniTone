@@ -32,7 +32,7 @@ void MiniTone::play(uint16_t frequency, uint32_t duration) {
   int32_t half_cycle = 1000000L / frequency / 2;
 
   while (toggle_count--) {
-	digitalWrite(_pin, HIGH);
+    digitalWrite(_pin, HIGH);
     delayMicroseconds(half_cycle);
     digitalWrite(_pin, LOW);
     delayMicroseconds(half_cycle);
