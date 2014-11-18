@@ -28,16 +28,13 @@ void MiniTone::play(uint8_t count, ...) {
 }
 
 void MiniTone::play(uint16_t frequency, uint32_t duration) {
-  uint8_t flag;
-  int32_t toggle_count = 2 * frequency * duration / 1000;
-  int32_t half_cycle = 1000000L / (frequency * 2);
+  int32_t toggle_count = frequency * duration / 1000;
+  int32_t half_cycle = 1000000L / frequency / 2;
 
   while (toggle_count--) {
-    //Toggle the pin
-    flag = !flag;
-    digitalWrite(_pin, flag ? LOW : HIGH);
-    //Delay a half cycle
+	digitalWrite(_pin, HIGH);
+    delayMicroseconds(half_cycle);
+    digitalWrite(_pin, LOW);
     delayMicroseconds(half_cycle);
   }
-  digitalWrite(_pin, LOW); //Keep pin low after stop
 }
