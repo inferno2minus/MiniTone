@@ -9,9 +9,9 @@
 
 #include "MiniTone.h"
 
-void MiniTone::begin(uint8_t pin) {
-  _pin = pin;
-  pinMode(_pin, OUTPUT);
+void MiniTone::begin(uint8_t buzzer_pin) {
+  _buzzer_pin = buzzer_pin;
+  pinMode(_buzzer_pin, OUTPUT);
 }
 
 void MiniTone::play(uint8_t count, ...) {
@@ -32,9 +32,9 @@ void MiniTone::play(uint16_t frequency, uint32_t duration) {
   int32_t half_cycle = 1000000L / frequency / 2;
 
   while (toggle_count--) {
-    digitalWrite(_pin, HIGH);
+    digitalWrite(_buzzer_pin, HIGH);
     delayMicroseconds(half_cycle);
-    digitalWrite(_pin, LOW);
+    digitalWrite(_buzzer_pin, LOW);
     delayMicroseconds(half_cycle);
   }
 }

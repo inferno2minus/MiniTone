@@ -14,11 +14,11 @@
 
 class MiniTone {
 public:
-  void begin(uint8_t);
-  void play(uint8_t, ...);
-  void play(uint16_t, uint32_t);
+  void begin(uint8_t buzzer_pin);
+  void play(uint8_t count, ...);
+  void play(uint16_t frequency, uint32_t duration);
 private:
-  uint8_t _pin;
+  uint8_t _buzzer_pin;
 };
 
 #endif
