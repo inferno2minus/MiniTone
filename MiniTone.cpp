@@ -24,6 +24,7 @@ void MiniTone::play(uint8_t count, ...) {
     play(frequency, duration);
     count--;
   }
+
   va_end(ap);
 }
 
