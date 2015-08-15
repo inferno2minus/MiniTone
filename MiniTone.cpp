@@ -1,10 +1,9 @@
 /**
- * Project MiniTone Library
+ * Project:     MiniTone Library
  * Description: Tone generator library for Arduino
- * Version: v1.0
- * Programmer: Kompanets Konstantin (aka I2M)
- *
- * Hardware setup: Buzzer module
+ * Version:     v1.0
+ * Author:      Bill Porter
+ *              Kompanets Konstantin (aka I2M)
  */
 
 #include "MiniTone.h"
