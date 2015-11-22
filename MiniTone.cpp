@@ -2,8 +2,7 @@
  * Project:     MiniTone Library
  * Description: Tone generator library for Arduino
  * Version:     v1.0
- * Author:      Bill Porter
- *              Kompanets Konstantin (aka I2M)
+ * Author:      Kompanets Konstantin (aka I2M)
  */
 
 #include "MiniTone.h"
