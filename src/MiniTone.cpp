@@ -26,9 +26,9 @@ void MiniTone::play(uint8_t count, ...) {
   va_end(ap);
 }
 
-void MiniTone::play(uint16_t frequency, uint32_t duration) {
-  int32_t toggle_count = frequency * duration / 1000;
-  int32_t half_cycle = 1000000L / frequency / 2;
+void MiniTone::play(uint16_t frequency, uint16_t duration) {
+  uint16_t toggle_count = (uint32_t)frequency * duration / 1000;
+  uint16_t half_cycle = 1000000L / frequency / 2;
 
   while (toggle_count--) {
     digitalWrite(_buzzer_pin, HIGH);
